@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F6E95BD64A544CE95552344 /* libPods-DormsnapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB7F15B42CD799868EBA6C0 /* libPods-DormsnapTests.a */; };
+		7CACB0D138DC56A11FFCA87C /* libPods-Dormsnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */; };
 		94A8370C1D2492CC0067EAE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370B1D2492CC0067EAE1 /* main.m */; };
 		94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370E1D2492CC0067EAE1 /* AppDelegate.m */; };
-		94A837121D2492CC0067EAE1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837111D2492CC0067EAE1 /* FirstViewController.m */; };
-		94A837151D2492CC0067EAE1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837141D2492CC0067EAE1 /* SecondViewController.m */; };
+		94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837111D2492CC0067EAE1 /* DSFeedViewController.m */; };
 		94A837181D2492CC0067EAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A837161D2492CC0067EAE1 /* Main.storyboard */; };
 		94A8371A1D2492CC0067EAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A837191D2492CC0067EAE1 /* Assets.xcassets */; };
 		94A8371D1D2492CC0067EAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A8371B1D2492CC0067EAE1 /* LaunchScreen.storyboard */; };
 		94A837281D2492CD0067EAE1 /* DormsnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837271D2492CD0067EAE1 /* DormsnapTests.m */; };
+		94A837361D2494210067EAE1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837351D2494210067EAE1 /* DSConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20793393A15CBBB862C7C02E /* Pods-Dormsnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormsnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap.debug.xcconfig"; sourceTree = "<group>"; };
+		40D25FB988F75303973686DD /* Pods-Dormsnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormsnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap.release.xcconfig"; sourceTree = "<group>"; };
 		94A837071D2492CC0067EAE1 /* Dormsnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormsnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8370B1D2492CC0067EAE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94A8370D1D2492CC0067EAE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A8370E1D2492CC0067EAE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		94A837101D2492CC0067EAE1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		94A837111D2492CC0067EAE1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		94A837131D2492CC0067EAE1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		94A837141D2492CC0067EAE1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		94A837101D2492CC0067EAE1 /* DSFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSFeedViewController.h; sourceTree = "<group>"; };
+		94A837111D2492CC0067EAE1 /* DSFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSFeedViewController.m; sourceTree = "<group>"; };
 		94A837171D2492CC0067EAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94A837191D2492CC0067EAE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94A8371C1D2492CC0067EAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,12 @@
 		94A837231D2492CD0067EAE1 /* DormsnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DormsnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A837271D2492CD0067EAE1 /* DormsnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DormsnapTests.m; sourceTree = "<group>"; };
 		94A837291D2492CD0067EAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A837341D2494210067EAE1 /* DSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSConstants.h; path = Constants/DSConstants.h; sourceTree = "<group>"; };
+		94A837351D2494210067EAE1 /* DSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSConstants.m; path = Constants/DSConstants.m; sourceTree = "<group>"; };
+		B3F184E69181079D9869C849 /* Pods-DormsnapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DormsnapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DormsnapTests/Pods-DormsnapTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCB7F15B42CD799868EBA6C0 /* libPods-DormsnapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DormsnapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dormsnap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C297B11205040D31ED3A31 /* Pods-DormsnapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DormsnapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DormsnapTests/Pods-DormsnapTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CACB0D138DC56A11FFCA87C /* libPods-Dormsnap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6E95BD64A544CE95552344 /* libPods-DormsnapTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +79,8 @@
 				94A837091D2492CC0067EAE1 /* Dormsnap */,
 				94A837261D2492CD0067EAE1 /* DormsnapTests */,
 				94A837081D2492CC0067EAE1 /* Products */,
+				98812DDA811480249918EE81 /* Pods */,
+				ECF7B70508B312D42B6117A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,14 +98,11 @@
 			children = (
 				94A8370D1D2492CC0067EAE1 /* AppDelegate.h */,
 				94A8370E1D2492CC0067EAE1 /* AppDelegate.m */,
-				94A837101D2492CC0067EAE1 /* FirstViewController.h */,
-				94A837111D2492CC0067EAE1 /* FirstViewController.m */,
-				94A837131D2492CC0067EAE1 /* SecondViewController.h */,
-				94A837141D2492CC0067EAE1 /* SecondViewController.m */,
+				94A837331D2493E20067EAE1 /* Constants */,
+				94A837321D2492D30067EAE1 /* Controllers */,
 				94A837161D2492CC0067EAE1 /* Main.storyboard */,
-				94A837191D2492CC0067EAE1 /* Assets.xcassets */,
 				94A8371B1D2492CC0067EAE1 /* LaunchScreen.storyboard */,
-				94A8371E1D2492CC0067EAE1 /* Info.plist */,
+				94A837191D2492CC0067EAE1 /* Assets.xcassets */,
 				94A8370A1D2492CC0067EAE1 /* Supporting Files */,
 			);
 			path = Dormsnap;
@@ -102,6 +111,7 @@
 		94A8370A1D2492CC0067EAE1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94A8371E1D2492CC0067EAE1 /* Info.plist */,
 				94A8370B1D2492CC0067EAE1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -116,6 +126,44 @@
 			path = DormsnapTests;
 			sourceTree = "<group>";
 		};
+		94A837321D2492D30067EAE1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94A837101D2492CC0067EAE1 /* DSFeedViewController.h */,
+				94A837111D2492CC0067EAE1 /* DSFeedViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		94A837331D2493E20067EAE1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				94A837341D2494210067EAE1 /* DSConstants.h */,
+				94A837351D2494210067EAE1 /* DSConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		98812DDA811480249918EE81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20793393A15CBBB862C7C02E /* Pods-Dormsnap.debug.xcconfig */,
+				40D25FB988F75303973686DD /* Pods-Dormsnap.release.xcconfig */,
+				E4C297B11205040D31ED3A31 /* Pods-DormsnapTests.debug.xcconfig */,
+				B3F184E69181079D9869C849 /* Pods-DormsnapTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECF7B70508B312D42B6117A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */,
+				BCB7F15B42CD799868EBA6C0 /* libPods-DormsnapTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A8372C1D2492CD0067EAE1 /* Build configuration list for PBXNativeTarget "Dormsnap" */;
 			buildPhases = (
+				66549587CAA508FE80083794 /* [CP] Check Pods Manifest.lock */,
 				94A837031D2492CC0067EAE1 /* Sources */,
 				94A837041D2492CC0067EAE1 /* Frameworks */,
 				94A837051D2492CC0067EAE1 /* Resources */,
+				06BE3EE9410B347DC322266F /* [CP] Embed Pods Frameworks */,
+				0362F411140B30263D5A5DE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A8372F1D2492CD0067EAE1 /* Build configuration list for PBXNativeTarget "DormsnapTests" */;
 			buildPhases = (
+				5A8E7A88EB030C223D16B371 /* [CP] Check Pods Manifest.lock */,
 				94A8371F1D2492CD0067EAE1 /* Sources */,
 				94A837201D2492CD0067EAE1 /* Frameworks */,
 				94A837211D2492CD0067EAE1 /* Resources */,
+				F703236F3DCEFE0DB89BC7BE /* [CP] Embed Pods Frameworks */,
+				4E072BB09F65043B19CA86DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,15 +265,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0362F411140B30263D5A5DE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		06BE3EE9410B347DC322266F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E072BB09F65043B19CA86DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DormsnapTests/Pods-DormsnapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A8E7A88EB030C223D16B371 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66549587CAA508FE80083794 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F703236F3DCEFE0DB89BC7BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DormsnapTests/Pods-DormsnapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94A837031D2492CC0067EAE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A837151D2492CC0067EAE1 /* SecondViewController.m in Sources */,
 				94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */,
-				94A837121D2492CC0067EAE1 /* FirstViewController.m in Sources */,
+				94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */,
 				94A8370C1D2492CC0067EAE1 /* main.m in Sources */,
+				94A837361D2494210067EAE1 /* DSConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,8 +492,13 @@
 		};
 		94A8372D1D2492CD0067EAE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20793393A15CBBB862C7C02E /* Pods-Dormsnap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
+				);
 				INFOPLIST_FILE = Dormsnap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.dormsnap.Dormsnap;
@@ -356,8 +508,13 @@
 		};
 		94A8372E1D2492CD0067EAE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40D25FB988F75303973686DD /* Pods-Dormsnap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
+				);
 				INFOPLIST_FILE = Dormsnap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.dormsnap.Dormsnap;
@@ -367,6 +524,7 @@
 		};
 		94A837301D2492CD0067EAE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4C297B11205040D31ED3A31 /* Pods-DormsnapTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DormsnapTests/Info.plist;
@@ -379,6 +537,7 @@
 		};
 		94A837311D2492CD0067EAE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F184E69181079D9869C849 /* Pods-DormsnapTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DormsnapTests/Info.plist;
@@ -408,6 +567,7 @@
 				94A8372E1D2492CD0067EAE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94A8372F1D2492CD0067EAE1 /* Build configuration list for PBXNativeTarget "DormsnapTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +576,7 @@
 				94A837311D2492CD0067EAE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

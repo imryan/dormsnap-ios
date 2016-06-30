@@ -6,34 +6,64 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+#import "DSFeedViewController.h"
 
-@interface DormsnapTests : XCTestCase
+SpecBegin(DSFeedViewController)
 
-@end
+describe(@"Thing", ^{
+    sharedExamplesFor(@"another shared behavior", ^(NSDictionary *data) {
+        // Locally defined shared examples can override global shared examples within its scope.
+    });
+    
+    beforeAll(^{
+        // This is run once and only once before all of the examples
+        // in this group and before any beforeEach blocks.
+    });
+    
+    beforeEach(^{
+        // This is run before each example.
+    });
+    
+    it(@"should do stuff", ^{
+        // This is an example block. Place your assertions here.
+    });
+    
+    it(@"should do some stuff asynchronously", ^{
+        waitUntil(^(DoneCallback done) {
+            // Async example blocks need to invoke done() callback.
+            done();
+        });
+    });
+    
+    itShouldBehaveLike(@"a shared behavior", @{@"key" : @"obj"});
+    
+    itShouldBehaveLike(@"another shared behavior", ^{
+        // Use a block that returns a dictionary if you need the context to be evaluated lazily,
+        // e.g. to use an object prepared in a beforeEach block.
+        return @{@"key" : @"obj"};
+    });
+    
+    describe(@"Nested examples", ^{
+        it(@"should do even more stuff", ^{
+            // ...
+        });
+    });
+    
+    pending(@"pending example");
+    
+    pending(@"another pending example", ^{
+        // ...
+    });
+    
+    afterEach(^{
+        // This is run after each example.
+    });
+    
+    afterAll(^{
+        // This is run once and only once after all of the examples
+        // in this group and after any afterEach blocks.
+    });
+});
 
-@implementation DormsnapTests
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
-@end
+SpecEnd
