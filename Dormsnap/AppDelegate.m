@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DSConstants.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setBarTintColor:[DSConstants defaultGreenColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                            NSFontAttributeName : [DSConstants navigationBarFont]
+                                                          }];
+    
+    [[UITabBar appearance] setTranslucent:NO];
+    [[UITabBar appearance] setTintColor:[DSConstants defaultGreenColor]];
+    
+    
     return YES;
 }
 

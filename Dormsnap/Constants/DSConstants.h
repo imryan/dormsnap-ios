@@ -7,6 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-extern NSString *const DSTintColorName;
-extern NSString *const DSFontName;
+@interface DSConstants : NSObject
+
+extern NSString *const DSFontNameExtraLight;
+extern NSString *const DSFontNameLight;
+extern NSString *const DSFontNameRegular;
+extern NSString *const DSFontNameMedium;
+extern NSString *const DSFontNameSemiBold;
+extern NSString *const DSFontNameBold;
+extern NSString *const DSFontNameExtraBold;
+
++ (UIColor *)defaultGreenColor;
+
++ (UIFont *)navigationBarFont;
++ (UIFont *)defaultFontWithSize:(CGFloat)size;
+
+@end

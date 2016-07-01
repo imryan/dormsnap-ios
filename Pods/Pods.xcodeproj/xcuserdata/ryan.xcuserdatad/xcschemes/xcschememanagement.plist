@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Specta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -38,6 +43,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>060842062A2E3E137A986E0EA56E5D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4487FB757098B521958F30E0B5EEE164</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4872A1F90ABB7206D7F59A0BF59F470</key>
+		<key>F2171E55F090CA3C8B89DDCE14550ADD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

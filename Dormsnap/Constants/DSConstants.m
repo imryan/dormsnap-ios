@@ -7,6 +7,32 @@
 //
 
 #import "DSConstants.h"
+#import <ChameleonFramework/Chameleon.h>
 
-NSString *const DSTintColor = @"";
-NSString *const DSFontName = @"HelveticaNeue-Regular";
+@implementation DSConstants
+
+NSString *const DSFontNameExtraLight = @"Raleway-ExtraLight";
+NSString *const DSFontNameLight      = @"Raleway-Light";
+NSString *const DSFontNameRegular    = @"Raleway-Regular";
+NSString *const DSFontNameMedium     = @"Raleway-Medium";
+NSString *const DSFontNameSemiBold   = @"Raleway-SemiBold";
+NSString *const DSFontNameBold       = @"Raleway-Bold";
+NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
+
+#pragma mark - Colors
+
++ (UIColor *)defaultGreenColor {
+    return [UIColor flatGreenColorDark];
+}
+
+#pragma mark - Font
+
++ (UIFont *)navigationBarFont {
+    return [UIFont fontWithName:DSFontNameSemiBold size:20.f];
+}
+
++ (UIFont *)defaultFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:DSFontNameRegular size:size];
+}
+
+@end

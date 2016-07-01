@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Dormsnap-->
+        <!--dormsnap-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="DSFeedViewController" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="A5M-7J-77L" secondAttribute="centerX" id="uEi-wa-0Lk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dormsnap" id="QXS-Iq-QcV"/>
+                    <navigationItem key="navigationItem" title="dormsnap" id="QXS-Iq-QcV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

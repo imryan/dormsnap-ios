@@ -13,6 +13,7 @@ target 'Dormsnap' do
 
   target 'DormsnapTests' do
     inherit! :search_paths
+    pod 'Specta', '~> 1.0'
   end
 
 end

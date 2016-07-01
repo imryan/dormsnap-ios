@@ -17,6 +17,13 @@
 		94A8371D1D2492CC0067EAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A8371B1D2492CC0067EAE1 /* LaunchScreen.storyboard */; };
 		94A837281D2492CD0067EAE1 /* DormsnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837271D2492CD0067EAE1 /* DormsnapTests.m */; };
 		94A837361D2494210067EAE1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837351D2494210067EAE1 /* DSConstants.m */; };
+		94F480D21D25F7820093614D /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CB1D25F7820093614D /* Raleway-Bold.ttf */; };
+		94F480D31D25F7820093614D /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */; };
+		94F480D41D25F7820093614D /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */; };
+		94F480D51D25F7820093614D /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CE1D25F7820093614D /* Raleway-Light.ttf */; };
+		94F480D61D25F7820093614D /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CF1D25F7820093614D /* Raleway-Medium.ttf */; };
+		94F480D71D25F7820093614D /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480D01D25F7820093614D /* Raleway-Regular.ttf */; };
+		94F480D81D25F7820093614D /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480D11D25F7820093614D /* Raleway-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		94A837291D2492CD0067EAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A837341D2494210067EAE1 /* DSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSConstants.h; path = Constants/DSConstants.h; sourceTree = "<group>"; };
 		94A837351D2494210067EAE1 /* DSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSConstants.m; path = Constants/DSConstants.m; sourceTree = "<group>"; };
+		94F480CB1D25F7820093614D /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "Resources/Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "Resources/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "Resources/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		94F480CE1D25F7820093614D /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "Resources/Raleway-Light.ttf"; sourceTree = "<group>"; };
+		94F480CF1D25F7820093614D /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "Resources/Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		94F480D01D25F7820093614D /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Regular.ttf"; path = "Resources/Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		94F480D11D25F7820093614D /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-SemiBold.ttf"; path = "Resources/Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		B3F184E69181079D9869C849 /* Pods-DormsnapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DormsnapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DormsnapTests/Pods-DormsnapTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCB7F15B42CD799868EBA6C0 /* libPods-DormsnapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DormsnapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dormsnap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +112,7 @@
 			children = (
 				94A8370D1D2492CC0067EAE1 /* AppDelegate.h */,
 				94A8370E1D2492CC0067EAE1 /* AppDelegate.m */,
+				94F480C21D25F3AD0093614D /* Resources */,
 				94A837331D2493E20067EAE1 /* Constants */,
 				94A837321D2492D30067EAE1 /* Controllers */,
 				94A837161D2492CC0067EAE1 /* Main.storyboard */,
@@ -142,6 +157,20 @@
 				94A837351D2494210067EAE1 /* DSConstants.m */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		94F480C21D25F3AD0093614D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94F480CB1D25F7820093614D /* Raleway-Bold.ttf */,
+				94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */,
+				94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */,
+				94F480CE1D25F7820093614D /* Raleway-Light.ttf */,
+				94F480CF1D25F7820093614D /* Raleway-Medium.ttf */,
+				94F480D01D25F7820093614D /* Raleway-Regular.ttf */,
+				94F480D11D25F7820093614D /* Raleway-SemiBold.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		98812DDA811480249918EE81 /* Pods */ = {
@@ -251,8 +280,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A8371D1D2492CC0067EAE1 /* LaunchScreen.storyboard in Resources */,
+				94F480D61D25F7820093614D /* Raleway-Medium.ttf in Resources */,
+				94F480D31D25F7820093614D /* Raleway-ExtraBold.ttf in Resources */,
+				94F480D41D25F7820093614D /* Raleway-ExtraLight.ttf in Resources */,
+				94F480D71D25F7820093614D /* Raleway-Regular.ttf in Resources */,
+				94F480D51D25F7820093614D /* Raleway-Light.ttf in Resources */,
 				94A8371A1D2492CC0067EAE1 /* Assets.xcassets in Resources */,
 				94A837181D2492CC0067EAE1 /* Main.storyboard in Resources */,
+				94F480D21D25F7820093614D /* Raleway-Bold.ttf in Resources */,
+				94F480D81D25F7820093614D /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
