@@ -7,7 +7,6 @@
 //
 
 #import "DSConstants.h"
-#import <ChameleonFramework/Chameleon.h>
 
 @implementation DSConstants
 
@@ -22,7 +21,11 @@ NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
 #pragma mark - Colors
 
 + (UIColor *)defaultGreenColor {
-    return [UIColor flatGreenColorDark];
+    return [UIColor colorWithRed:84/255.f green:217/255.f blue:140/255.f alpha:1.f];
+}
+
++ (UIColor *)defaultGrayColor {
+    return [UIColor colorWithRed:182/255.f green:192/255.f blue:210/255.f alpha:0.3f];
 }
 
 #pragma mark - Font

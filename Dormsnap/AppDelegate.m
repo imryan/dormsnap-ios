@@ -20,14 +20,17 @@
     // Override point for customization after application launch.
     
     [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     [[UINavigationBar appearance] setBarTintColor:[DSConstants defaultGreenColor]];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor],
                                                             NSFontAttributeName : [DSConstants navigationBarFont]
                                                           }];
     
     [[UITabBar appearance] setTranslucent:NO];
     [[UITabBar appearance] setTintColor:[DSConstants defaultGreenColor]];
-    
+    [[UITabBar appearance] setShadowImage:[UIImage new]];
+    [[UITabBar appearance] setBackgroundImage:[UIImage new]]; // Set custom tab bar image
     
     return YES;
 }

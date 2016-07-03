@@ -6,6 +6,8 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
+#import <ChameleonFramework/Chameleon.h>
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -20,6 +22,7 @@ extern NSString *const DSFontNameBold;
 extern NSString *const DSFontNameExtraBold;
 
 + (UIColor *)defaultGreenColor;
++ (UIColor *)defaultGrayColor;
 
 + (UIFont *)navigationBarFont;
 + (UIFont *)defaultFontWithSize:(CGFloat)size;

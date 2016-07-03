@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F6E95BD64A544CE95552344 /* libPods-DormsnapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB7F15B42CD799868EBA6C0 /* libPods-DormsnapTests.a */; };
 		7CACB0D138DC56A11FFCA87C /* libPods-Dormsnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */; };
+		942BF1DA1D26D80000D178FA /* DSFeedFilterBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1D91D26D80000D178FA /* DSFeedFilterBar.m */; };
+		942BF1DD1D284ED300D178FA /* DSPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1DC1D284ED300D178FA /* DSPostCell.m */; };
 		94A8370C1D2492CC0067EAE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370B1D2492CC0067EAE1 /* main.m */; };
 		94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370E1D2492CC0067EAE1 /* AppDelegate.m */; };
 		94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837111D2492CC0067EAE1 /* DSFeedViewController.m */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		20793393A15CBBB862C7C02E /* Pods-Dormsnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormsnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap.debug.xcconfig"; sourceTree = "<group>"; };
 		40D25FB988F75303973686DD /* Pods-Dormsnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormsnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap.release.xcconfig"; sourceTree = "<group>"; };
+		942BF1D81D26D80000D178FA /* DSFeedFilterBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFeedFilterBar.h; path = UI/DSFeedFilterBar.h; sourceTree = "<group>"; };
+		942BF1D91D26D80000D178FA /* DSFeedFilterBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedFilterBar.m; path = UI/DSFeedFilterBar.m; sourceTree = "<group>"; };
+		942BF1DB1D284ED300D178FA /* DSPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSPostCell.h; path = UI/DSPostCell.h; sourceTree = "<group>"; };
+		942BF1DC1D284ED300D178FA /* DSPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSPostCell.m; path = UI/DSPostCell.m; sourceTree = "<group>"; };
 		94A837071D2492CC0067EAE1 /* Dormsnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormsnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8370B1D2492CC0067EAE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94A8370D1D2492CC0067EAE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +93,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		942BF1D41D26D5F000D178FA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				942BF1D81D26D80000D178FA /* DSFeedFilterBar.h */,
+				942BF1D91D26D80000D178FA /* DSFeedFilterBar.m */,
+				942BF1DB1D284ED300D178FA /* DSPostCell.h */,
+				942BF1DC1D284ED300D178FA /* DSPostCell.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		94A836FE1D2492CC0067EAE1 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +130,7 @@
 				94A8370D1D2492CC0067EAE1 /* AppDelegate.h */,
 				94A8370E1D2492CC0067EAE1 /* AppDelegate.m */,
 				94F480C21D25F3AD0093614D /* Resources */,
+				942BF1D41D26D5F000D178FA /* UI */,
 				94A837331D2493E20067EAE1 /* Constants */,
 				94A837321D2492D30067EAE1 /* Controllers */,
 				94A837161D2492CC0067EAE1 /* Main.storyboard */,
@@ -399,10 +417,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942BF1DD1D284ED300D178FA /* DSPostCell.m in Sources */,
 				94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */,
 				94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */,
 				94A8370C1D2492CC0067EAE1 /* main.m in Sources */,
 				94A837361D2494210067EAE1 /* DSConstants.m in Sources */,
+				942BF1DA1D26D80000D178FA /* DSFeedFilterBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +551,7 @@
 			baseConfigurationReference = 20793393A15CBBB862C7C02E /* Pods-Dormsnap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
@@ -547,6 +568,7 @@
 			baseConfigurationReference = 40D25FB988F75303973686DD /* Pods-Dormsnap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"",
