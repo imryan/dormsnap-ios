@@ -6,11 +6,11 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-@class DSFeedFilterBar;
+@class DSSegmentedControl;
 
 #import <UIKit/UIKit.h>
 
-@interface DSFeedViewController : UIViewController <DSFeedFilterBarDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface DSFeedViewController : UIViewController <DSSegmentedControlDelegate, UITableViewDelegate, UITableViewDataSource>
 
 
 @end

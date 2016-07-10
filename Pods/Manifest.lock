@@ -18,6 +18,7 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.0):
     - FontAwesomeKit/Core
+  - Masonry (1.0.1)
   - pop (1.0.9)
   - Specta (1.0.5)
 
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - ChameleonFramework (~> 2.1)
   - CWStatusBarNotification (~> 2.3)
   - FontAwesomeKit (~> 2.2)
+  - Masonry
   - pop (~> 1.0)
   - Specta (~> 1.0)
 
@@ -32,9 +34,10 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CWStatusBarNotification: 3fec41edcb0ae3677d9febfcb9632d8bdf52294c
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
-PODFILE CHECKSUM: 7bd0331a473dcd9b3c9a259c2d9e5709d97e0f23
+PODFILE CHECKSUM: 667262b45c4f24037e479c726c778625337b0bdd
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0

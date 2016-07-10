@@ -13,4 +13,7 @@
 @property (nonatomic, weak) IBOutlet UIView *postBaseView;
 @property (nonatomic, weak) IBOutlet UIImageView *postImageView;
 
+@property (nonatomic, strong) IBOutlet UILabel *postTitleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *postDetailLabel;
+
 @end

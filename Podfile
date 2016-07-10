@@ -10,6 +10,7 @@ target 'Dormsnap' do
   pod 'FontAwesomeKit', '~> 2.2'
   pod 'CWStatusBarNotification', '~> 2.3'
   pod 'ChameleonFramework', '~> 2.1'
+  pod 'Masonry'
 
   target 'DormsnapTests' do
     inherit! :search_paths

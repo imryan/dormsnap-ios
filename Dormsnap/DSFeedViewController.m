@@ -6,8 +6,11 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-#import "DSFeedFilterBar.h"
+#import <FontAwesomeKit/FontAwesomeKit.h>
+
+#import "DSSegmentedControl.h"
 #import "DSPostCell.h"
+#import "Masonry.h"
 
 #import "DSFeedViewController.h"
 
@@ -15,7 +18,7 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) DSFeedFilterBar *filterBar;
+@property (nonatomic, strong) DSSegmentedControl *filterBar;
 
 @end
 
@@ -28,7 +31,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -39,33 +42,51 @@
         cell = [[DSPostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
+    FAKFontAwesome *pinIcon = [FAKFontAwesome mapMarkerIconWithSize:13.f];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:pinIcon.attributedString];
+    NSAttributedString *universityNameString = [[NSAttributedString alloc] initWithString:@" Pace University"];
+    
+    [attributedString appendAttributedString:universityNameString];
+    
+    // TODO: Write a helper method to build these strings better
+    
+    cell.postTitleLabel.text = @"55 John Street";
+    cell.postDetailLabel.attributedText = attributedString;
+    
     return cell;
 }
 
 - (void)setupTableView {
+    self.tableView.contentInset = UIEdgeInsetsMake(-15, 0, 0, 0);
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    [self.tableView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-    [self.tableView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
-    [self.tableView.topAnchor constraintEqualToAnchor:self.filterBar.bottomAnchor].active = YES;
-    [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.width.equalTo(self.view.mas_width);
+        make.top.equalTo(self.filterBar.mas_bottom);
+        make.bottom.equalTo(self.view.mas_bottom);
+    }];
 }
 
 #pragma mark - DSFeedFilterBar
 
 - (void)setupSegmentedControl {
-    CGRect frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, 40.f);
+    CGRect frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, 45.f);
     
-    self.filterBar = [[DSFeedFilterBar alloc] initWithFrame:frame];
+    self.filterBar = [[DSSegmentedControl alloc] initWithFrame:frame];
     self.filterBar.delegate = self;
     
     [self.view addSubview:self.filterBar];
     
-    [self.filterBar.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-    [self.filterBar.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
+//    [self.filterBar mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.view.mas_left);
+//        make.right.equalTo(self.view.mas_right);
+//    }];
+    
+    [self.filterBar setupConstraints];
 }
 
-- (void)filterBar:(DSFeedFilterBar *)filterBar didChangeIndex:(NSUInteger)index {
+- (void)segmentedControl:(DSSegmentedControl *)filterBar didChangeIndex:(NSUInteger)index {
     // Slide table view for new index
 }
 
