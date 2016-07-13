@@ -6,7 +6,9 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
+#import <ChameleonFramework/Chameleon.h>
 #import <pop/POP.h>
+
 #import "Masonry.h"
 #import "DSConstants.h"
 
@@ -101,7 +103,7 @@
     self.residencesButton = [self filterBarButton:@"RESIDENCES"];
     self.residencesButton.tag = 1;
     
-    [self.residencesButton addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchDown];
+    [self.residencesButton addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.residencesButton];
     
     self.hotButton = [self filterBarButton:@"HOT"];
@@ -109,18 +111,18 @@
     self.hotButton.frame = CGRectMake(0, 0, 100.f, 45.f);
     self.hotButton.center = self.center;
     
-    [self.hotButton addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchDown];
+    [self.hotButton addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.hotButton];
     
     self.universitiesButton = [self filterBarButton:@"UNIVERSITIES"];
     self.universitiesButton.tag = 3;
     
-    [self.universitiesButton addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchDown];
+    [self.universitiesButton addTarget:self action:@selector(selectedButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.universitiesButton];
     
     self.indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100.f, 3.f)];
     self.indicatorView.tag = 4;
-    self.indicatorView.center = CGPointMake(self.center.x, self.center.y + 21.5f);
+    self.indicatorView.center = CGPointMake(self.center.x, self.center.y + 21.f);
     self.indicatorView.backgroundColor = [DSConstants defaultGrayColor];
     
     [self addSubview:self.indicatorView];

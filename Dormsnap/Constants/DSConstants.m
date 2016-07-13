@@ -6,6 +6,8 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
+#import <FontAwesomeKit/FontAwesomeKit.h>
+
 #import "DSConstants.h"
 
 @implementation DSConstants
@@ -36,6 +38,20 @@ NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
 
 + (UIFont *)defaultFontWithSize:(CGFloat)size {
     return [UIFont fontWithName:DSFontNameRegular size:size];
+}
+
+#pragma mark - Icon Strings
+
++ (NSAttributedString *)postLocationString:(NSString *)location {
+    FAKFontAwesome *pinIcon = [FAKFontAwesome mapMarkerIconWithSize:13.f];
+    NSString *paddedLocation = [NSString stringWithFormat:@" %@", location];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:pinIcon.attributedString];
+    NSAttributedString *universityNameString = [[NSAttributedString alloc] initWithString:paddedLocation];
+    
+    [attributedString appendAttributedString:universityNameString];
+    
+    return attributedString;
 }
 
 @end

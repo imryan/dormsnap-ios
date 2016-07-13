@@ -6,7 +6,7 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-#import <ChameleonFramework/Chameleon.h>
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -26,5 +26,7 @@ extern NSString *const DSFontNameExtraBold;
 
 + (UIFont *)navigationBarFont;
 + (UIFont *)defaultFontWithSize:(CGFloat)size;
+
++ (NSAttributedString *)postLocationString:(NSString *)location;
 
 @end

@@ -6,10 +6,9 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-#import <FontAwesomeKit/FontAwesomeKit.h>
-
 #import "DSSegmentedControl.h"
 #import "DSPostCell.h"
+#import "DSConstants.h"
 #import "Masonry.h"
 
 #import "DSFeedViewController.h"
@@ -31,7 +30,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 312.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,22 +45,14 @@
         cell = [[DSPostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
-    FAKFontAwesome *pinIcon = [FAKFontAwesome mapMarkerIconWithSize:13.f];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:pinIcon.attributedString];
-    NSAttributedString *universityNameString = [[NSAttributedString alloc] initWithString:@" Pace University"];
-    
-    [attributedString appendAttributedString:universityNameString];
-    
-    // TODO: Write a helper method to build these strings better
-    
     cell.postTitleLabel.text = @"55 John Street";
-    cell.postDetailLabel.attributedText = attributedString;
+    cell.postDetailLabel.attributedText = [DSConstants postLocationString:@"Pace University"];
     
     return cell;
 }
 
 - (void)setupTableView {
-    self.tableView.contentInset = UIEdgeInsetsMake(-15, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(-25, 0, 0, 0);
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
