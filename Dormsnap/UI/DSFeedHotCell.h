@@ -1,5 +1,5 @@
 //
-//  DSPostCell.h
+//  DSFeedHotCell.h
 //  Dormsnap
 //
 //  Created by Ryan Cohen on 7/2/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DSPostCell : UITableViewCell
+@interface DSFeedHotCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UIView *postBaseView;
 @property (nonatomic, weak) IBOutlet UIImageView *postImageView;

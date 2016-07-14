@@ -12,6 +12,4 @@
 
 @interface DSFeedViewController : UIViewController <DSSegmentedControlDelegate, UITableViewDelegate, UITableViewDataSource>
 
-
 @end
-

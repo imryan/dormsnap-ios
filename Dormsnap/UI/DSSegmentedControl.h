@@ -10,9 +10,15 @@
 
 @class DSSegmentedControl;
 
+typedef NS_ENUM(NSUInteger, DSSegmentedButtonType) {
+    DSSegmentedButtonTypeResidences,
+    DSSegmentedButtonTypeHot,
+    DSSegmentedButtonTypeUniversities
+};
+
 @protocol DSSegmentedControlDelegate <NSObject>
 
-- (void)segmentedControl:(DSSegmentedControl *)filterBar didChangeIndex:(NSUInteger)index;
+- (void)segmentedControl:(DSSegmentedControl *)segmentedControl didChangeSegment:(DSSegmentedButtonType)segment;
 
 @end
 

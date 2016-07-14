@@ -6,10 +6,14 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-#import "DSSegmentedControl.h"
-#import "DSPostCell.h"
 #import "DSConstants.h"
 #import "Masonry.h"
+#import <pop/POP.h>
+
+#import "DSFeedHotCell.h"
+#import "DSFeedResidenceCell.h"
+#import "DSFeedUniversityCell.h"
+#import "DSSegmentedControl.h"
 
 #import "DSFeedViewController.h"
 
@@ -17,7 +21,8 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) DSSegmentedControl *filterBar;
+@property (nonatomic, strong) DSSegmentedControl *segmentedControl;
+@property (nonatomic, assign) DSSegmentedButtonType selectedSegment;
 
 @end
 
@@ -30,7 +35,48 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    NSInteger rows = 0;
+    
+    switch (self.selectedSegment) {
+        case DSSegmentedButtonTypeHot:
+            rows = 3;
+            break;
+        case DSSegmentedButtonTypeResidences:
+            rows = 10;
+            break;
+        case DSSegmentedButtonTypeUniversities:
+            rows = 10;
+            break;
+        default:
+            break;
+    }
+    
+    return rows;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.3;
+    
+    switch (self.selectedSegment) {
+        case DSSegmentedButtonTypeResidences:
+            transition.subtype = kCATransitionFromLeft;
+            break;
+        case DSSegmentedButtonTypeHot:
+            transition.subtype = kCATransitionFromBottom; // TODO: Do this on launch regardless.
+            break;
+        case DSSegmentedButtonTypeUniversities:
+            transition.subtype = kCATransitionFromRight;
+            break;
+        default:
+            break;
+    }
+    
+    transition.type = kCATransitionPush;
+    
+    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+    
+    [cell.layer addAnimation:transition forKey:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,15 +84,42 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"CellId";
-    DSPostCell *cell = (DSPostCell *)[tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    static NSString *cellIdHot = @"CellIdHot";
+    static NSString *cellIdResidences = @"CellIdResidences";
+    static NSString *cellIdUniversities = @"CellIdUniversities";
     
-    if (!cell) {
-        cell = [[DSPostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    if (self.selectedSegment == DSSegmentedButtonTypeHot) {
+        DSFeedHotCell *cell = (DSFeedHotCell *)[tableView dequeueReusableCellWithIdentifier:cellIdHot forIndexPath:indexPath];
+        
+        if (!cell) {
+            cell = [[DSFeedHotCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdHot];
+        }
+        
+        cell.postTitleLabel.text = @"55 John Street";
+        cell.postDetailLabel.attributedText = [DSConstants postLocationString:@"Pace University"];
+        
+        return cell;
     }
     
-    cell.postTitleLabel.text = @"55 John Street";
-    cell.postDetailLabel.attributedText = [DSConstants postLocationString:@"Pace University"];
+    else if (self.selectedSegment == DSSegmentedButtonTypeResidences) {
+        DSFeedResidenceCell *cell = (DSFeedResidenceCell *)[tableView dequeueReusableCellWithIdentifier:cellIdResidences forIndexPath:indexPath];
+        
+        if (!cell) {
+            cell = [[DSFeedResidenceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdResidences];
+        }
+        
+        // Customize cell
+        
+        return cell;
+    }
+    
+    DSFeedUniversityCell *cell = (DSFeedUniversityCell *)[tableView dequeueReusableCellWithIdentifier:cellIdUniversities forIndexPath:indexPath];
+    
+    if (!cell) {
+        cell = [[DSFeedUniversityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdUniversities];
+    }
+    
+    // Customize cell
     
     return cell;
 }
@@ -58,7 +131,7 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left);
         make.width.equalTo(self.view.mas_width);
-        make.top.equalTo(self.filterBar.mas_bottom);
+        make.top.equalTo(self.segmentedControl.mas_bottom);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
 }
@@ -68,21 +141,18 @@
 - (void)setupSegmentedControl {
     CGRect frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, 45.f);
     
-    self.filterBar = [[DSSegmentedControl alloc] initWithFrame:frame];
-    self.filterBar.delegate = self;
+    self.segmentedControl = [[DSSegmentedControl alloc] initWithFrame:frame];
+    self.segmentedControl.delegate = self;
     
-    [self.view addSubview:self.filterBar];
+    [self.view addSubview:self.segmentedControl];
+    [self.segmentedControl setupConstraints];
     
-//    [self.filterBar mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view.mas_left);
-//        make.right.equalTo(self.view.mas_right);
-//    }];
-    
-    [self.filterBar setupConstraints];
+    self.selectedSegment = DSSegmentedButtonTypeHot;
 }
 
-- (void)segmentedControl:(DSSegmentedControl *)filterBar didChangeIndex:(NSUInteger)index {
-    // Slide table view for new index
+- (void)segmentedControl:(DSSegmentedControl *)filterBar didChangeSegment:(DSSegmentedButtonType)segment {
+    self.selectedSegment = segment;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Layout

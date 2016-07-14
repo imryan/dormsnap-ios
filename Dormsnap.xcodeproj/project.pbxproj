@@ -10,7 +10,7 @@
 		4F6E95BD64A544CE95552344 /* libPods-DormsnapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB7F15B42CD799868EBA6C0 /* libPods-DormsnapTests.a */; };
 		7CACB0D138DC56A11FFCA87C /* libPods-Dormsnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */; };
 		942BF1DA1D26D80000D178FA /* DSSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1D91D26D80000D178FA /* DSSegmentedControl.m */; };
-		942BF1DD1D284ED300D178FA /* DSPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1DC1D284ED300D178FA /* DSPostCell.m */; };
+		942BF1DD1D284ED300D178FA /* DSFeedHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1DC1D284ED300D178FA /* DSFeedHotCell.m */; };
 		94A8370C1D2492CC0067EAE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370B1D2492CC0067EAE1 /* main.m */; };
 		94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370E1D2492CC0067EAE1 /* AppDelegate.m */; };
 		94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837111D2492CC0067EAE1 /* DSFeedViewController.m */; };
@@ -19,6 +19,8 @@
 		94A8371D1D2492CC0067EAE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A8371B1D2492CC0067EAE1 /* LaunchScreen.storyboard */; };
 		94A837281D2492CD0067EAE1 /* DormsnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837271D2492CD0067EAE1 /* DormsnapTests.m */; };
 		94A837361D2494210067EAE1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837351D2494210067EAE1 /* DSConstants.m */; };
+		94B611791D37FE32004E889B /* DSFeedResidenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B611781D37FE32004E889B /* DSFeedResidenceCell.m */; };
+		94B6117C1D37FE3F004E889B /* DSFeedUniversityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B6117B1D37FE3F004E889B /* DSFeedUniversityCell.m */; };
 		94F480D21D25F7820093614D /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CB1D25F7820093614D /* Raleway-Bold.ttf */; };
 		94F480D31D25F7820093614D /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */; };
 		94F480D41D25F7820093614D /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */; };
@@ -43,8 +45,8 @@
 		40D25FB988F75303973686DD /* Pods-Dormsnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormsnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dormsnap/Pods-Dormsnap.release.xcconfig"; sourceTree = "<group>"; };
 		942BF1D81D26D80000D178FA /* DSSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSegmentedControl.h; path = UI/DSSegmentedControl.h; sourceTree = "<group>"; };
 		942BF1D91D26D80000D178FA /* DSSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSegmentedControl.m; path = UI/DSSegmentedControl.m; sourceTree = "<group>"; };
-		942BF1DB1D284ED300D178FA /* DSPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSPostCell.h; path = UI/DSPostCell.h; sourceTree = "<group>"; };
-		942BF1DC1D284ED300D178FA /* DSPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSPostCell.m; path = UI/DSPostCell.m; sourceTree = "<group>"; };
+		942BF1DB1D284ED300D178FA /* DSFeedHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFeedHotCell.h; path = UI/DSFeedHotCell.h; sourceTree = "<group>"; };
+		942BF1DC1D284ED300D178FA /* DSFeedHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedHotCell.m; path = UI/DSFeedHotCell.m; sourceTree = "<group>"; };
 		94A837071D2492CC0067EAE1 /* Dormsnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormsnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8370B1D2492CC0067EAE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94A8370D1D2492CC0067EAE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +62,10 @@
 		94A837291D2492CD0067EAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A837341D2494210067EAE1 /* DSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSConstants.h; path = Constants/DSConstants.h; sourceTree = "<group>"; };
 		94A837351D2494210067EAE1 /* DSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSConstants.m; path = Constants/DSConstants.m; sourceTree = "<group>"; };
+		94B611771D37FE32004E889B /* DSFeedResidenceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFeedResidenceCell.h; path = UI/DSFeedResidenceCell.h; sourceTree = "<group>"; };
+		94B611781D37FE32004E889B /* DSFeedResidenceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedResidenceCell.m; path = UI/DSFeedResidenceCell.m; sourceTree = "<group>"; };
+		94B6117A1D37FE3F004E889B /* DSFeedUniversityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFeedUniversityCell.h; path = UI/DSFeedUniversityCell.h; sourceTree = "<group>"; };
+		94B6117B1D37FE3F004E889B /* DSFeedUniversityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedUniversityCell.m; path = UI/DSFeedUniversityCell.m; sourceTree = "<group>"; };
 		94F480CB1D25F7820093614D /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "Resources/Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "Resources/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "Resources/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -98,8 +104,12 @@
 			children = (
 				942BF1D81D26D80000D178FA /* DSSegmentedControl.h */,
 				942BF1D91D26D80000D178FA /* DSSegmentedControl.m */,
-				942BF1DB1D284ED300D178FA /* DSPostCell.h */,
-				942BF1DC1D284ED300D178FA /* DSPostCell.m */,
+				942BF1DB1D284ED300D178FA /* DSFeedHotCell.h */,
+				942BF1DC1D284ED300D178FA /* DSFeedHotCell.m */,
+				94B611771D37FE32004E889B /* DSFeedResidenceCell.h */,
+				94B611781D37FE32004E889B /* DSFeedResidenceCell.m */,
+				94B6117A1D37FE3F004E889B /* DSFeedUniversityCell.h */,
+				94B6117B1D37FE3F004E889B /* DSFeedUniversityCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -513,11 +523,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				942BF1DD1D284ED300D178FA /* DSPostCell.m in Sources */,
+				942BF1DD1D284ED300D178FA /* DSFeedHotCell.m in Sources */,
+				94B611791D37FE32004E889B /* DSFeedResidenceCell.m in Sources */,
 				94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */,
 				94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */,
 				94A8370C1D2492CC0067EAE1 /* main.m in Sources */,
 				94A837361D2494210067EAE1 /* DSConstants.m in Sources */,
+				94B6117C1D37FE3F004E889B /* DSFeedUniversityCell.m in Sources */,
 				942BF1DA1D26D80000D178FA /* DSSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
