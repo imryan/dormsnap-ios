@@ -7,6 +7,7 @@
 //
 
 #import <FontAwesomeKit/FontAwesomeKit.h>
+#import <ChameleonFramework/Chameleon.h>
 
 #import "DSConstants.h"
 
@@ -44,7 +45,7 @@ NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
 
 + (NSAttributedString *)postLocationString:(NSString *)location {
     FAKFontAwesome *pinIcon = [FAKFontAwesome mapMarkerIconWithSize:13.f];
-    NSString *paddedLocation = [NSString stringWithFormat:@" %@", location];
+    NSString *paddedLocation = [NSString stringWithFormat:@"  %@", location];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:pinIcon.attributedString];
     NSAttributedString *universityNameString = [[NSAttributedString alloc] initWithString:paddedLocation];
@@ -52,6 +53,30 @@ NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
     [attributedString appendAttributedString:universityNameString];
     
     return attributedString;
+}
+
++ (NSAttributedString *)postLikesString:(NSUInteger)likes {
+    FAKIonIcons *heartIcon = [FAKIonIcons heartIconWithSize:12.8f];
+    NSString *paddedLocation = [NSString stringWithFormat:@" %lu", likes];
+    
+    [heartIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWatermelonColor] }];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:heartIcon.attributedString];
+    NSAttributedString *universityNameString = [[NSAttributedString alloc] initWithString:paddedLocation];
+    
+    [attributedString appendAttributedString:universityNameString];
+    
+    return attributedString;
+}
+
+#pragma mark - Images
+
++ (UIImage *)tabBarFeedImage {
+    FAKIonIcons *feedIcon = [FAKIonIcons gridIconWithSize:32.f];
+    
+    [feedIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWhiteColorDark] }];
+    
+    return [feedIcon imageWithSize:CGSizeMake(50.f, 50.f)];
 }
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-@class DSSegmentedControl;
+#import "DSSegmentedControl.h"
 
 #import <UIKit/UIKit.h>
 

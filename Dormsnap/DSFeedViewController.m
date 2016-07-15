@@ -14,6 +14,7 @@
 #import "DSFeedResidenceCell.h"
 #import "DSFeedUniversityCell.h"
 #import "DSSegmentedControl.h"
+#import "DSTabBarItem.h"
 
 #import "DSFeedViewController.h"
 
@@ -42,10 +43,10 @@
             rows = 3;
             break;
         case DSSegmentedButtonTypeResidences:
-            rows = 10;
+            rows = 3;
             break;
         case DSSegmentedButtonTypeUniversities:
-            rows = 10;
+            rows = 3;
             break;
         default:
             break;
@@ -56,26 +57,25 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromBottom;
     transition.duration = 0.3;
     
-    switch (self.selectedSegment) {
-        case DSSegmentedButtonTypeResidences:
-            transition.subtype = kCATransitionFromLeft;
-            break;
-        case DSSegmentedButtonTypeHot:
-            transition.subtype = kCATransitionFromBottom; // TODO: Do this on launch regardless.
-            break;
-        case DSSegmentedButtonTypeUniversities:
-            transition.subtype = kCATransitionFromRight;
-            break;
-        default:
-            break;
-    }
-    
-    transition.type = kCATransitionPush;
+//    switch (self.selectedSegment) {
+//        case DSSegmentedButtonTypeResidences:
+//            transition.subtype = kCATransitionFromRight;
+//            break;
+//        case DSSegmentedButtonTypeHot:
+//            transition.subtype = kCATransitionFromBottom; // TODO: Do this on launch regardless.
+//            break;
+//        case DSSegmentedButtonTypeUniversities:
+//            transition.subtype = kCATransitionFromLeft;
+//            break;
+//        default:
+//            break;
+//    }
     
     [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
-    
     [cell.layer addAnimation:transition forKey:nil];
 }
 
@@ -97,6 +97,7 @@
         
         cell.postTitleLabel.text = @"55 John Street";
         cell.postDetailLabel.attributedText = [DSConstants postLocationString:@"Pace University"];
+        cell.postLikesLabel.attributedText = [DSConstants postLikesString:55];
         
         return cell;
     }
@@ -152,6 +153,9 @@
 
 - (void)segmentedControl:(DSSegmentedControl *)filterBar didChangeSegment:(DSSegmentedButtonType)segment {
     self.selectedSegment = segment;
+    
+    // Animate slide
+    
     [self.tableView reloadData];
 }
 
@@ -170,6 +174,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layoutView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    DSTabBarItem *feedItem = [[DSTabBarItem alloc] initWithImage:[DSConstants tabBarFeedImage] index:0];
+    [[self navigationController] setTabBarItem:feedItem];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -21,6 +21,7 @@
 		94A837361D2494210067EAE1 /* DSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837351D2494210067EAE1 /* DSConstants.m */; };
 		94B611791D37FE32004E889B /* DSFeedResidenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B611781D37FE32004E889B /* DSFeedResidenceCell.m */; };
 		94B6117C1D37FE3F004E889B /* DSFeedUniversityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B6117B1D37FE3F004E889B /* DSFeedUniversityCell.m */; };
+		94DB245C1D396E1800D41704 /* DSTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DB245B1D396E1800D41704 /* DSTabBarItem.m */; };
 		94F480D21D25F7820093614D /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CB1D25F7820093614D /* Raleway-Bold.ttf */; };
 		94F480D31D25F7820093614D /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */; };
 		94F480D41D25F7820093614D /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */; };
@@ -66,6 +67,8 @@
 		94B611781D37FE32004E889B /* DSFeedResidenceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedResidenceCell.m; path = UI/DSFeedResidenceCell.m; sourceTree = "<group>"; };
 		94B6117A1D37FE3F004E889B /* DSFeedUniversityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFeedUniversityCell.h; path = UI/DSFeedUniversityCell.h; sourceTree = "<group>"; };
 		94B6117B1D37FE3F004E889B /* DSFeedUniversityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedUniversityCell.m; path = UI/DSFeedUniversityCell.m; sourceTree = "<group>"; };
+		94DB245A1D396E1800D41704 /* DSTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSTabBarItem.h; path = UI/DSTabBarItem.h; sourceTree = "<group>"; };
+		94DB245B1D396E1800D41704 /* DSTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSTabBarItem.m; path = UI/DSTabBarItem.m; sourceTree = "<group>"; };
 		94F480CB1D25F7820093614D /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Bold.ttf"; path = "Resources/Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		94F480CC1D25F7820093614D /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraBold.ttf"; path = "Resources/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		94F480CD1D25F7820093614D /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-ExtraLight.ttf"; path = "Resources/Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				94B611781D37FE32004E889B /* DSFeedResidenceCell.m */,
 				94B6117A1D37FE3F004E889B /* DSFeedUniversityCell.h */,
 				94B6117B1D37FE3F004E889B /* DSFeedUniversityCell.m */,
+				94DB245A1D396E1800D41704 /* DSTabBarItem.h */,
+				94DB245B1D396E1800D41704 /* DSTabBarItem.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				942BF1DD1D284ED300D178FA /* DSFeedHotCell.m in Sources */,
+				94DB245C1D396E1800D41704 /* DSTabBarItem.m in Sources */,
 				94B611791D37FE32004E889B /* DSFeedResidenceCell.m in Sources */,
 				94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */,
 				94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */,

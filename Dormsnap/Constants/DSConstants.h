@@ -6,8 +6,6 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -28,5 +26,8 @@ extern NSString *const DSFontNameExtraBold;
 + (UIFont *)defaultFontWithSize:(CGFloat)size;
 
 + (NSAttributedString *)postLocationString:(NSString *)location;
++ (NSAttributedString *)postLikesString:(NSUInteger)likes;
+
++ (UIImage *)tabBarFeedImage;
 
 @end
