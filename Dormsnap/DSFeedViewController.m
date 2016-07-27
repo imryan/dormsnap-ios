@@ -29,6 +29,12 @@
 
 @implementation DSFeedViewController
 
+#pragma mark - Functions
+
+- (void)openSettings {
+    [self performSegueWithIdentifier:@"ToSettings" sender:nil];
+}
+
 #pragma mark - UITableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -40,7 +46,7 @@
     
     switch (self.selectedSegment) {
         case DSSegmentedButtonTypeHot:
-            rows = 3;
+            rows = 2;
             break;
         case DSSegmentedButtonTypeResidences:
             rows = 3;
@@ -58,22 +64,21 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromBottom;
-    transition.duration = 0.3;
+    transition.duration = 0.25;
     
-//    switch (self.selectedSegment) {
-//        case DSSegmentedButtonTypeResidences:
-//            transition.subtype = kCATransitionFromRight;
-//            break;
-//        case DSSegmentedButtonTypeHot:
-//            transition.subtype = kCATransitionFromBottom; // TODO: Do this on launch regardless.
-//            break;
-//        case DSSegmentedButtonTypeUniversities:
-//            transition.subtype = kCATransitionFromLeft;
-//            break;
-//        default:
-//            break;
-//    }
+    switch (self.selectedSegment) {
+        case DSSegmentedButtonTypeResidences:
+            transition.subtype = kCATransitionFromLeft;
+            break;
+        case DSSegmentedButtonTypeHot:
+            transition.subtype = kCATransitionFromBottom; // TODO: Do this on launch and bounce when cells land
+            break;
+        case DSSegmentedButtonTypeUniversities:
+            transition.subtype = kCATransitionFromRight;
+            break;
+        default:
+            break;
+    }
     
     [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
     [cell.layer addAnimation:transition forKey:nil];
@@ -97,7 +102,14 @@
         
         cell.postTitleLabel.text = @"55 John Street";
         cell.postDetailLabel.attributedText = [DSConstants postLocationString:@"Pace University"];
-        cell.postLikesLabel.attributedText = [DSConstants postLikesString:55];
+        cell.postLikesLabel.attributedText = [DSConstants postLikesString:32];
+        
+        if (indexPath.row == 1) {
+            cell.postImageView.image = [UIImage imageNamed:@"beekman"];
+            cell.postTitleLabel.text = @"33 Beekman Street";
+            cell.postDetailLabel.attributedText = [DSConstants postLocationString:@"Pace University"];
+            cell.postLikesLabel.attributedText = [DSConstants postLikesString:54];
+        }
         
         return cell;
     }
@@ -137,6 +149,14 @@
     }];
 }
 
+- (void)setupBarButtonItem {
+    UIBarButtonItem *settingsBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[DSConstants barButtonSettingsImage]
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(openSettings)];
+    self.navigationItem.rightBarButtonItem = settingsBarButtonItem;
+}
+
 #pragma mark - DSFeedFilterBar
 
 - (void)setupSegmentedControl {
@@ -156,6 +176,7 @@
     
     // Animate slide
     
+    
     [self.tableView reloadData];
 }
 
@@ -165,25 +186,37 @@
     [self.view removeConstraints:self.view.constraints];
     [self setupSegmentedControl];
     [self setupTableView];
+    [self setupBarButtonItem];
 
     // Setup more controls
 }
 
 #pragma mark - View
 
+- (void)viewWillAppear:(BOOL)animated {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        DSTabBarItem *feedItem = [[DSTabBarItem alloc] initWithImage:[DSConstants tabBarFeedImage] index:0];
+        [[self navigationController] setTabBarItem:feedItem];
+    });
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layoutView];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    DSTabBarItem *feedItem = [[DSTabBarItem alloc] initWithImage:[DSConstants tabBarFeedImage] index:0];
-    [[self navigationController] setTabBarItem:feedItem];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if (![segue.identifier isEqualToString:@"ToSettings"]) {
+        
+    }
 }
 
 @end

@@ -11,6 +11,9 @@
 		7CACB0D138DC56A11FFCA87C /* libPods-Dormsnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F91ABCF2C1F7A5A922246 /* libPods-Dormsnap.a */; };
 		942BF1DA1D26D80000D178FA /* DSSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1D91D26D80000D178FA /* DSSegmentedControl.m */; };
 		942BF1DD1D284ED300D178FA /* DSFeedHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 942BF1DC1D284ED300D178FA /* DSFeedHotCell.m */; };
+		946276EC1D3C117300C78CEF /* DSExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946276EB1D3C117300C78CEF /* DSExploreViewController.m */; };
+		946276EF1D3C118600C78CEF /* DSCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 946276EE1D3C118600C78CEF /* DSCameraViewController.m */; };
+		9464B6411D450FC300CF5A28 /* DSSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6401D450FC300CF5A28 /* DSSettingsViewController.m */; };
 		94A8370C1D2492CC0067EAE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370B1D2492CC0067EAE1 /* main.m */; };
 		94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370E1D2492CC0067EAE1 /* AppDelegate.m */; };
 		94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A837111D2492CC0067EAE1 /* DSFeedViewController.m */; };
@@ -48,6 +51,12 @@
 		942BF1D91D26D80000D178FA /* DSSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSegmentedControl.m; path = UI/DSSegmentedControl.m; sourceTree = "<group>"; };
 		942BF1DB1D284ED300D178FA /* DSFeedHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFeedHotCell.h; path = UI/DSFeedHotCell.h; sourceTree = "<group>"; };
 		942BF1DC1D284ED300D178FA /* DSFeedHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSFeedHotCell.m; path = UI/DSFeedHotCell.m; sourceTree = "<group>"; };
+		946276EA1D3C117300C78CEF /* DSExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSExploreViewController.h; path = Controllers/DSExploreViewController.h; sourceTree = "<group>"; };
+		946276EB1D3C117300C78CEF /* DSExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSExploreViewController.m; path = Controllers/DSExploreViewController.m; sourceTree = "<group>"; };
+		946276ED1D3C118600C78CEF /* DSCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSCameraViewController.h; path = Controllers/DSCameraViewController.h; sourceTree = "<group>"; };
+		946276EE1D3C118600C78CEF /* DSCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSCameraViewController.m; path = Controllers/DSCameraViewController.m; sourceTree = "<group>"; };
+		9464B63F1D450FC300CF5A28 /* DSSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSettingsViewController.h; path = Controllers/DSSettingsViewController.h; sourceTree = "<group>"; };
+		9464B6401D450FC300CF5A28 /* DSSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSettingsViewController.m; path = Controllers/DSSettingsViewController.m; sourceTree = "<group>"; };
 		94A837071D2492CC0067EAE1 /* Dormsnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormsnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8370B1D2492CC0067EAE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94A8370D1D2492CC0067EAE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -179,6 +188,12 @@
 			children = (
 				94A837101D2492CC0067EAE1 /* DSFeedViewController.h */,
 				94A837111D2492CC0067EAE1 /* DSFeedViewController.m */,
+				946276ED1D3C118600C78CEF /* DSCameraViewController.h */,
+				946276EE1D3C118600C78CEF /* DSCameraViewController.m */,
+				946276EA1D3C117300C78CEF /* DSExploreViewController.h */,
+				946276EB1D3C117300C78CEF /* DSExploreViewController.m */,
+				9464B63F1D450FC300CF5A28 /* DSSettingsViewController.h */,
+				9464B6401D450FC300CF5A28 /* DSSettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -529,10 +544,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				942BF1DD1D284ED300D178FA /* DSFeedHotCell.m in Sources */,
+				946276EC1D3C117300C78CEF /* DSExploreViewController.m in Sources */,
 				94DB245C1D396E1800D41704 /* DSTabBarItem.m in Sources */,
 				94B611791D37FE32004E889B /* DSFeedResidenceCell.m in Sources */,
+				9464B6411D450FC300CF5A28 /* DSSettingsViewController.m in Sources */,
 				94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */,
 				94A837121D2492CC0067EAE1 /* DSFeedViewController.m in Sources */,
+				946276EF1D3C118600C78CEF /* DSCameraViewController.m in Sources */,
 				94A8370C1D2492CC0067EAE1 /* main.m in Sources */,
 				94A837361D2494210067EAE1 /* DSConstants.m in Sources */,
 				94B6117C1D37FE3F004E889B /* DSFeedUniversityCell.m in Sources */,

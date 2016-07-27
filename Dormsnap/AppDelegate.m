@@ -7,6 +7,7 @@
 //
 
 #import "DSConstants.h"
+#import "DSTabBarItem.h"
 
 #import "AppDelegate.h"
 
@@ -23,6 +24,7 @@
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     [[UINavigationBar appearance] setBarTintColor:[DSConstants defaultGreenColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor],
                                                             NSFontAttributeName : [DSConstants navigationBarFont]
@@ -33,7 +35,49 @@
     [[UITabBar appearance] setShadowImage:[UIImage new]];
     [[UITabBar appearance] setBackgroundImage:[UIImage new]]; // Set custom tab bar image
     
+    UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabController.tabBar;
+    
+    for (NSUInteger i = 0; i < tabBar.items.count; i++) {
+        UITabBarItem *item = tabBar.items[i];
+        
+        if (i == 0) {
+            [item setImage:[DSConstants tabBarFeedImage]];
+            item = [self temporaryTabBarItem:item index:0];
+        }
+        else if (i == 1) {
+            [item setImage:[DSConstants tabBarCameraImage]];
+            item = [self temporaryTabBarItem:item index:1];
+        }
+        else if (i == 2) {
+            [item setImage:[DSConstants tabBarExploreImage]];
+            item = [self temporaryTabBarItem:item index:2];
+        }
+    }
+    
     return YES;
+}
+
+- (UITabBarItem *)temporaryTabBarItem:(UITabBarItem *)item index:(NSUInteger)index {
+    UIImage *image = [UIImage new];
+    
+    switch (index) {
+        case 0:
+            image = [DSConstants tabBarFeedImage];
+            break;
+        case 1:
+            image = [DSConstants tabBarCameraImage];
+            break;
+        case 2:
+            image = [DSConstants tabBarExploreImage];
+            break;
+            
+    }
+    
+    item.title = nil;
+    item.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+    
+    return item;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -10,4 +10,6 @@
 
 @interface DSFeedUniversityCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UIView *postBaseView;
+
 @end

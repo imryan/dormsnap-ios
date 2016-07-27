@@ -13,13 +13,15 @@
 
 @implementation DSConstants
 
-NSString *const DSFontNameExtraLight = @"Raleway-ExtraLight";
-NSString *const DSFontNameLight      = @"Raleway-Light";
-NSString *const DSFontNameRegular    = @"Raleway-Regular";
-NSString *const DSFontNameMedium     = @"Raleway-Medium";
-NSString *const DSFontNameSemiBold   = @"Raleway-SemiBold";
-NSString *const DSFontNameBold       = @"Raleway-Bold";
-NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
+NSString * const DS_APP_VERSION      = @"0.1.0";
+
+NSString * const DSFontNameExtraLight = @"Raleway-ExtraLight";
+NSString * const DSFontNameLight      = @"Raleway-Light";
+NSString * const DSFontNameRegular    = @"Raleway-Regular";
+NSString * const DSFontNameMedium     = @"Raleway-Medium";
+NSString * const DSFontNameSemiBold   = @"Raleway-SemiBold";
+NSString * const DSFontNameBold       = @"Raleway-Bold";
+NSString * const DSFontNameExtraBold  = @"Raleway-ExtraBold";
 
 #pragma mark - Colors
 
@@ -69,7 +71,15 @@ NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
     return attributedString;
 }
 
-#pragma mark - Images
++ (NSAttributedString *)heartIconString {
+    FAKIonIcons *heartIcon = [FAKIonIcons heartIconWithSize:12.8f];
+    
+    [heartIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWatermelonColor] }];
+    
+    return heartIcon.attributedString;
+}
+
+#pragma mark - Icon Images
 
 + (UIImage *)tabBarFeedImage {
     FAKIonIcons *feedIcon = [FAKIonIcons gridIconWithSize:32.f];
@@ -77,6 +87,76 @@ NSString *const DSFontNameExtraBold  = @"Raleway-ExtraBold";
     [feedIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWhiteColorDark] }];
     
     return [feedIcon imageWithSize:CGSizeMake(50.f, 50.f)];
+}
+
++ (UIImage *)tabBarCameraImage {
+    FAKIonIcons *cameraIcon = [FAKIonIcons cameraIconWithSize:38.f];
+    
+    [cameraIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWhiteColorDark] }];
+    
+    return [cameraIcon imageWithSize:CGSizeMake(50.f, 50.f)];
+}
+
++ (UIImage *)tabBarExploreImage {
+    FAKIonIcons *feedIcon = [FAKIonIcons compassIconWithSize:27.f];
+    
+    [feedIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWhiteColorDark] }];
+    
+    return [feedIcon imageWithSize:CGSizeMake(50.f, 50.f)];
+}
+
++ (UIImage *)barButtonSettingsImage {
+    FAKIonIcons *gearIcon = [FAKIonIcons iosGearOutlineIconWithSize:28.f];
+    
+    return [gearIcon imageWithSize:CGSizeMake(25.f, 25.f)];
+}
+
++ (UIImage *)barButtonCancelImage {
+    FAKIonIcons *closeIcon = [FAKIonIcons androidCloseIconWithSize:28.f];
+    
+    return [closeIcon imageWithSize:CGSizeMake(25.f, 25.f)];
+}
+
+#pragma mark - Table Cell Images
+
++ (UIImage *)myPostsCellImage {
+    FAKIonIcons *gridIcon = [FAKIonIcons gridIconWithSize:23.f];
+    
+    [gridIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatBlackColor] }];
+    
+    return [gridIcon imageWithSize:CGSizeMake(18.f, 30.f)];
+}
+
++ (UIImage *)myLikesCellImage {
+    FAKIonIcons *heartIcon = [FAKIonIcons heartIconWithSize:22.f];
+    
+    [heartIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatWatermelonColor] }];
+    
+    return [heartIcon imageWithSize:CGSizeMake(18.f, 30.f)];
+}
+
++ (UIImage *)bugCellImage {
+    FAKIonIcons *bugIcon = [FAKIonIcons bugIconWithSize:22.f];
+    
+    [bugIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatBlackColor] }];
+    
+    return [bugIcon imageWithSize:CGSizeMake(18.f, 30.f)];
+}
+
++ (UIImage *)emailCellImage {
+    FAKIonIcons *emailIcon = [FAKIonIcons iosEmailOutlineIconWithSize:22.f];
+    
+    [emailIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatBlackColor] }];
+    
+    return [emailIcon imageWithSize:CGSizeMake(18.f, 30.f)];
+}
+
++ (UIImage *)openSourceImage {
+    FAKIonIcons *octocatIcon = [FAKIonIcons socialOctocatIconWithSize:22.f];
+    
+    [octocatIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatBlackColor] }];
+    
+    return [octocatIcon imageWithSize:CGSizeMake(18.f, 30.f)];
 }
 
 @end

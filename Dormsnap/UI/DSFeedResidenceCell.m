@@ -12,6 +12,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    self.postBaseView.layer.masksToBounds = YES;
+    self.postBaseView.layer.cornerRadius = 2.f;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
