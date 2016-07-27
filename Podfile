@@ -11,6 +11,7 @@ target 'Dormsnap' do
   pod 'CWStatusBarNotification', '~> 2.3'
   pod 'ChameleonFramework', '~> 2.1'
   pod 'Masonry'
+  pod 'AFNetworking', '~> 3.0' 
 
   target 'DormsnapTests' do
     inherit! :search_paths

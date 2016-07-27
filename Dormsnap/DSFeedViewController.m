@@ -6,7 +6,9 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
+#import "DormsnapAPI.h"
 #import "DSConstants.h"
+
 #import "Masonry.h"
 #import <pop/POP.h>
 
@@ -17,6 +19,7 @@
 #import "DSTabBarItem.h"
 
 #import "DSFeedViewController.h"
+#import "DSPostViewController.h"
 
 @interface DSFeedViewController ()
 
@@ -204,6 +207,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self layoutView];
+    
+//    DSUniversity *university = [[DSUniversity alloc] initWithName:@"NYU" address:@"W 4th St New York, NY" colorHex:@"57078d"];
 }
 
 - (void)didReceiveMemoryWarning {

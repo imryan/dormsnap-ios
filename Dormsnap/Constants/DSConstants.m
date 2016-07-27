@@ -13,7 +13,7 @@
 
 @implementation DSConstants
 
-NSString * const DS_APP_VERSION      = @"0.1.0";
+NSString * const DS_APP_VERSION       = @"1.0.0";
 
 NSString * const DSFontNameExtraLight = @"Raleway-ExtraLight";
 NSString * const DSFontNameLight      = @"Raleway-Light";

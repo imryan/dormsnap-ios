@@ -4,69 +4,55 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CWStatusBarNotification.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>FontAwesomeKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Dormsnap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Pods-DormsnapTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Specta.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>060842062A2E3E137A986E0EA56E5D94</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>24AA3B8E0996125F6280097B3B965008</key>
+		<key>324A160C42326140F2533ADD344DDE61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,6 +63,16 @@
 			<true/>
 		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8BA22B06EE156A70A0242AD754A00845</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -96,17 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB4CE4FF843B32F87819AD778849AB40</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>F2171E55F090CA3C8B89DDCE14550ADD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F6A61F65F8DACBEF599660E819002B42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
