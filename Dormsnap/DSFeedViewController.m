@@ -6,7 +6,7 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
-#import "DormsnapAPI.h"
+#import "DormsnapKit.h"
 #import "DSConstants.h"
 
 #import "Masonry.h"
@@ -208,7 +208,18 @@
     [super viewDidLoad];
     [self layoutView];
     
+//    DSUser *user = [[DSUser alloc] initWithIdentifer:@"1" token:@"1234"];
 //    DSUniversity *university = [[DSUniversity alloc] initWithName:@"NYU" address:@"W 4th St New York, NY" colorHex:@"57078d"];
+//    DSResidence *residence = [[DSResidence alloc] initWithName:@"Clark Street" address:@"2 Clark St Brooklyn, NY" university:university];
+//    DSPost *post = [[DSPost alloc] initWithResidence:residence user:user photos:@[] detail:@"Cozy dorm room." likes:0];
+//    
+//    [[DormsnapAPI sharedInstance] createPost:post completion:^(BOOL created, NSError *error) {
+//        if (created) {
+//            NSLog(@"Created post: %@", post.residence.name);
+//        } else {
+//            NSLog(@"Error: %@", error.localizedDescription);
+//        }
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -220,7 +231,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if (![segue.identifier isEqualToString:@"ToSettings"]) {
-        
+        // Going somewhere else...
     }
 }
 

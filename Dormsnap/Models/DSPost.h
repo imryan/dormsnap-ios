@@ -19,6 +19,8 @@
 @property (nonatomic, readonly) NSString *detail;
 @property (nonatomic, readonly) NSUInteger likes;
 
+// @property (nonatomic, readonly) NSArray *tags;
+
 - (instancetype)initWithResidence:(DSResidence *)residence
                              user:(DSUser *)user
                            photos:(NSArray *)photos

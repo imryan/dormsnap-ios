@@ -156,7 +156,7 @@ NSString * const DSFontNameExtraBold  = @"Raleway-ExtraBold";
     
     [octocatIcon addAttributes:@{ NSForegroundColorAttributeName : [UIColor flatBlackColor] }];
     
-    return [octocatIcon imageWithSize:CGSizeMake(18.f, 30.f)];
+    return [octocatIcon imageWithSize:CGSizeMake(19.5f, 30.f)];
 }
 
 @end

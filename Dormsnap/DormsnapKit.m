@@ -7,23 +7,23 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
-#import "DormsnapAPI.h"
+#import "DormsnapKit.h"
 
-@implementation DormsnapAPI
+@implementation DormsnapKit
 
-NSString * const kDSAPICreateUser     = @"https://dormsnap.co/api/user/add";
-NSString * const kDSAPIGetUserById    = @"https://dormsnap.co/api/user/getById/%@";
-NSString * const kDSAPIDeleteUserById = @"https://dormsnap.co/api/user/delete/%@";
-NSString * const kDSAPIUpdateUser     = @"https://dormsnap.co/api/user/update";
+NSString * const kDSKitCreateUser     = @"http://dormsnap.co/api/user/add";
+NSString * const kDSKitGetUserById    = @"http://dormsnap.co/api/user/getById/%@";
+NSString * const kDSKitDeleteUserById = @"http://dormsnap.co/api/user/delete/%@";
+NSString * const kDSKitUpdateUser     = @"http://dormsnap.co/api/user/update";
 
-NSString * const kDSAPICreatePost     = @"https://dormsnap.co/api/post/add";
-NSString * const kDSAPIGetPostById    = @"https://dormsnap.co/api/post/getById/%@";
-NSString * const kDSAPIDeletePostById = @"https://dormsnap.co/api/post/delete/%@";
+NSString * const kDSKitCreatePost     = @"http://dormsnap.co/api/post/add";
+NSString * const kDSKitGetPostById    = @"http://dormsnap.co/api/post/getById/%@";
+NSString * const kDSKitDeletePostById = @"http://dormsnap.co/api/post/delete/%@";
 
 #pragma mark - Initialization
 
 + (instancetype)sharedInstance {
-    static DormsnapAPI *instance = nil;
+    static DormsnapKit *instance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
@@ -37,12 +37,16 @@ NSString * const kDSAPIDeletePostById = @"https://dormsnap.co/api/post/delete/%@
 
 - (void)createUser:(DSUser *)user completion:(DSCreateDeleteHandler)completion {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSDictionary *parameters = @{};
+    NSDictionary *parameters = @{ @"token" : user.token };
     
-    [manager POST:kDSAPIUpdateUser parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        // Implementation now coming to a theater near you!
+    [manager POST:kDSKitCreateUser parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"Response: %@", responseObject);
         
-        completion(true, nil);
+        if ([responseObject[@"token"] length] > 0) {
+            completion(true, nil);
+        }
+        
+        completion(false, nil);
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         completion(false, error);
@@ -51,30 +55,45 @@ NSString * const kDSAPIDeletePostById = @"https://dormsnap.co/api/post/delete/%@
 
 - (void)getUserByIdentifier:(NSString *)identifier completion:(DSGetUserHandler)completion {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *endpoint = [NSString stringWithFormat:kDSAPIGetUserById, identifier];
+    NSString *endpoint = [NSString stringWithFormat:kDSKitGetUserById, identifier];
     
     [manager GET:endpoint parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        // Implementation now coming to a theater near you!
-        
-        completion(nil, nil);
+        DSUser *user = [[DSUser alloc] initWithIdentifer:responseObject[@"id"] token:responseObject[@"token"]];
+        completion(user, nil);
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         completion(nil, error);
     }];
 }
 
-- (void)updateUserByIdentifier:(NSString *)identifier completion:(DSUpdateHandler)completion {
-    // Implementation now coming to a theater near you!
+- (void)updateUser:(DSUser *)user completion:(DSUpdateHandler)completion {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSDictionary *parameters = @{ @"id"    : user.identifier,
+                                  @"token" : user.token
+                                };
+    
+    [manager PUT:kDSKitUpdateUser parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        if (responseObject[@"id"] != nil && responseObject[@"token"] != nil) {
+            completion(true, nil);
+        }
+        
+        completion(false, nil);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        completion(false, error);
+    }];
 }
 
 - (void)deleteUserByIdentifier:(NSString *)identifier completion:(DSCreateDeleteHandler)completion {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *endpoint = [NSString stringWithFormat:kDSAPIDeleteUserById, identifier];
+    NSString *endpoint = [NSString stringWithFormat:kDSKitDeleteUserById, identifier];
     
     [manager DELETE:endpoint parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
-        // Implementation now coming to a theater near you!
+        if (responseObject[@"id"] != nil && responseObject[@"token"] != nil) {
+            completion(true, nil);
+        }
         
-        completion(true, nil);
+        completion(false, nil);
         
     } failure:^(NSURLSessionTask *task, NSError *error) {
         completion(false, error);
@@ -87,7 +106,7 @@ NSString * const kDSAPIDeletePostById = @"https://dormsnap.co/api/post/delete/%@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSDictionary *parameters = @{};
     
-    [manager POST:kDSAPICreatePost parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager POST:kDSKitCreatePost parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         // Implementation now coming to a theater near you!
         
         /*
@@ -107,7 +126,7 @@ NSString * const kDSAPIDeletePostById = @"https://dormsnap.co/api/post/delete/%@
 
 - (void)getPostWithIdentifier:(NSString *)identifier completion:(DSGetPostHandler)completion {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *endpoint = [NSString stringWithFormat:kDSAPIGetPostById, identifier];
+    NSString *endpoint = [NSString stringWithFormat:kDSKitGetPostById, identifier];
     
     [manager GET:endpoint parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         // Implementation now coming to a theater near you!
@@ -121,7 +140,7 @@ NSString * const kDSAPIDeletePostById = @"https://dormsnap.co/api/post/delete/%@
 
 - (void)deletePostWithIdentifier:(NSString *)identifier completion:(DSCreateDeleteHandler)completion {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *endpoint = [NSString stringWithFormat:kDSAPIDeletePostById, identifier];
+    NSString *endpoint = [NSString stringWithFormat:kDSKitDeletePostById, identifier];
     
     [manager DELETE:endpoint parameters:nil success:^(NSURLSessionTask *task, id responseObject) {
         // Implementation now coming to a theater near you!

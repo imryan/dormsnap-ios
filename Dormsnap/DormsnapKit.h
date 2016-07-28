@@ -6,13 +6,14 @@
 //  Copyright © 2016 Dormsnap. All rights reserved.
 //
 
+#import "DSUser.h"
 #import "DSUniversity.h"
 #import "DSResidence.h"
 #import "DSPost.h"
 
 #import <Foundation/Foundation.h>
 
-@interface DormsnapAPI : NSObject
+@interface DormsnapKit : NSObject
 
 typedef void (^DSCreateDeleteHandler)(BOOL created, NSError *error);
 typedef void (^DSUpdateHandler)(BOOL updated, NSError *error);
@@ -25,49 +26,49 @@ typedef void (^DSGetPostHandler)(DSPost *post, NSError *error);
  
  @params User object
  */
-extern NSString * const kDSAPICreateUser;
+extern NSString * const kDSKitCreateUser;
 
 /**
  GET - Gets a User object by their ID
  
  @params User ID
  */
-extern NSString * const kDSAPIGetUserById;
+extern NSString * const kDSKitGetUserById;
 
 /**
  DELETE - Deletes a User object by their ID
  
  @params User ID
  */
-extern NSString * const kDSAPIDeleteUserById;
+extern NSString * const kDSKitDeleteUserById;
 
 /**
  PUT - Updates a User object by their ID
  
  @params User object
  */
-extern NSString * const kDSAPIUpdateUser;
+extern NSString * const kDSKitUpdateUser;
 
 /**
  POST - Creates a new Post
  
  @params Post object
  */
-extern NSString * const kDSAPICreatePost;
+extern NSString * const kDSKitCreatePost;
 
 /**
  GET - Get a Post objects by its ID
  
  @params Post ID
  */
-extern NSString * const kDSAPIGetPostById;
+extern NSString * const kDSKitGetPostById;
 
 /**
  DELETE - Deletes a Post by its ID
  
  @params Post ID
  */
-extern NSString * const kDSAPIDeletePostById;
+extern NSString * const kDSKitDeletePostById;
 
 /**
  Returns a new shared instance
@@ -95,7 +96,7 @@ extern NSString * const kDSAPIDeletePostById;
  
  @return @c BOOL Success , @c NSError error
  */
-- (void)updateUserByIdentifier:(NSString *)identifier completion:(DSUpdateHandler)completion;
+- (void)updateUser:(DSUser *)user completion:(DSUpdateHandler)completion;
 
 /**
  Deletes a User object by its ID
@@ -124,5 +125,7 @@ extern NSString * const kDSAPIDeletePostById;
  @return @c DSPost post , @c NSError error
  */
 - (void)deletePostWithIdentifier:(NSString *)identifier completion:(DSCreateDeleteHandler)completion;
+
+// TODO: University and Residence GETs. Preferably above posts.
 
 @end

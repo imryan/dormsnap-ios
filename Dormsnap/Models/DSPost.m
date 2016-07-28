@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSArray *photos;
 @property (nonatomic, strong) NSString *detail;
 @property (nonatomic, assign) NSUInteger likes;
+// @property (nonatomic, strong) NSArray *tags;
 
 @end
 
@@ -33,7 +34,11 @@
         self.user = user;
         self.photos = photos;
         self.detail = detail;
-        self.likes = likes;
+        self.likes = 0;
+        
+        if (likes > 0) {
+            self.likes = likes;
+        }
     }
     
     return self;

@@ -18,7 +18,7 @@
 		9464B6C91D484A4F00CF5A28 /* DSPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6C81D484A4F00CF5A28 /* DSPost.m */; };
 		9464B6CD1D484B5100CF5A28 /* DSResidence.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6CC1D484B5100CF5A28 /* DSResidence.m */; };
 		9464B6D01D484B5B00CF5A28 /* DSUniversity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6CF1D484B5B00CF5A28 /* DSUniversity.m */; };
-		9464B6D31D484D2600CF5A28 /* DormsnapAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6D21D484D2600CF5A28 /* DormsnapAPI.m */; };
+		9464B6D31D484D2600CF5A28 /* DormsnapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6D21D484D2600CF5A28 /* DormsnapKit.m */; };
 		9464B6D61D4855B200CF5A28 /* DSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9464B6D51D4855B200CF5A28 /* DSUser.m */; };
 		94A8370C1D2492CC0067EAE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370B1D2492CC0067EAE1 /* main.m */; };
 		94A8370F1D2492CC0067EAE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A8370E1D2492CC0067EAE1 /* AppDelegate.m */; };
@@ -71,8 +71,8 @@
 		9464B6CC1D484B5100CF5A28 /* DSResidence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSResidence.m; path = Models/DSResidence.m; sourceTree = "<group>"; };
 		9464B6CE1D484B5B00CF5A28 /* DSUniversity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSUniversity.h; path = Models/DSUniversity.h; sourceTree = "<group>"; };
 		9464B6CF1D484B5B00CF5A28 /* DSUniversity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSUniversity.m; path = Models/DSUniversity.m; sourceTree = "<group>"; };
-		9464B6D11D484D2600CF5A28 /* DormsnapAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormsnapAPI.h; sourceTree = "<group>"; };
-		9464B6D21D484D2600CF5A28 /* DormsnapAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DormsnapAPI.m; sourceTree = "<group>"; };
+		9464B6D11D484D2600CF5A28 /* DormsnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormsnapKit.h; sourceTree = "<group>"; };
+		9464B6D21D484D2600CF5A28 /* DormsnapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DormsnapKit.m; sourceTree = "<group>"; };
 		9464B6D41D4855B200CF5A28 /* DSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSUser.h; path = Models/DSUser.h; sourceTree = "<group>"; };
 		9464B6D51D4855B200CF5A28 /* DSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSUser.m; path = Models/DSUser.m; sourceTree = "<group>"; };
 		94A837071D2492CC0067EAE1 /* Dormsnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormsnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,8 +149,8 @@
 		9464B6CA1D484A5600CF5A28 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9464B6D11D484D2600CF5A28 /* DormsnapAPI.h */,
-				9464B6D21D484D2600CF5A28 /* DormsnapAPI.m */,
+				9464B6D11D484D2600CF5A28 /* DormsnapKit.h */,
+				9464B6D21D484D2600CF5A28 /* DormsnapKit.m */,
 				9464B6CE1D484B5B00CF5A28 /* DSUniversity.h */,
 				9464B6CF1D484B5B00CF5A28 /* DSUniversity.m */,
 				9464B6CB1D484B5100CF5A28 /* DSResidence.h */,
@@ -598,7 +598,7 @@
 				94A837361D2494210067EAE1 /* DSConstants.m in Sources */,
 				94B6117C1D37FE3F004E889B /* DSFeedUniversityCell.m in Sources */,
 				942BF1DA1D26D80000D178FA /* DSSegmentedControl.m in Sources */,
-				9464B6D31D484D2600CF5A28 /* DormsnapAPI.m in Sources */,
+				9464B6D31D484D2600CF5A28 /* DormsnapKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
